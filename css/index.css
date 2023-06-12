@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#game {
+  width: 100%;
+  height: 600px;
+  background: url(../images/sky.png);
+  /* 更改background-position-x 可以使背景图片移动 */
+  background-position-x: 0px;
+  position: relative;
+  overflow: hidden;
+}
+.bird {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../images/birds.png);
+  left: 50%;
+  margin-left: -15px;
+  top: 235px;
+  transition: top 0.3s linear;
+}
+.start {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 295px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bolder;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.score {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bolder;
+  color: #fff;
+  display: none;
+  z-index: 1;
+}
+.mask {
+  position: absolute;
+  /* 背景平铺父级 */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 2;
+}
+.end {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70px;
+  display: none;
+  text-align: center;
+  z-index: 3;
+  font-weight: bold;
+}
+.end .over {
+  color: red;
+  font-size: 36px;
+}
+.end .results,
+.end .final-score {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ff0;
+}
+.end .restart {
+  color: #09f;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.pipe {
+  position: absolute;
+  /* 将固定不变的样式在CSS内写 */
+  width: 52px;
+}
+.pipe.pipe-up {
+  top: 0;
+  background-image: url(../images/pipe2.png);
+  background-position-y: bottom;
+}
+.pipe.pipe-down {
+  background-image: url(../images/pipe1.png);
+  bottom: 0;
+}

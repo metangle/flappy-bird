@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flappy-bird</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="icon" href="bird.ico">
+</head>
+
+<body>
+	<div id="game">
+		<!-- 小鸟div -->
+		<div class="bird"></div>
+
+		<!-- 开始游戏按钮 -->
+		<div class="start start-white">开始游戏</div>
+
+		<!-- 分数 -->
+		<div class="score">0</div>
+
+		<!-- mask 蒙层 -->
+		<div class="mask"></div>
+
+		<!-- 游戏结束box -->
+		<div class="end">
+			<div class="over">游戏结束</div>
+			<div class="results">得分</div>
+			<div class="final-score">0</div>
+			<div class="restart">重新开始</div>
+		</div>
+	</div>
+	<script src="./js/utils.js"></script>
+	<script src="./js/index.js"></script>
+
+</body>
+
+</html>
